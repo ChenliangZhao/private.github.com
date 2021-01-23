@@ -1,33 +1,35 @@
----
-layout: page
-title: About
-permalink: /about/
----
+# Catbook
+CATbook is a CATegory-centric Jekyll theme for bloggers. There is a switch button to toggle between dark mode and light mode. This theme is originally inspired from [Book](https://github.com/kkninjae/book).
 
-## Theme Monos
-> Simple and lightweight theme for Jekyll
+[![LICENSE](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) ![GENERATOR](https://img.shields.io/badge/made_with-jekyll-blue.svg) ![VERSION](https://img.shields.io/badge/current_version-1.0-green.svg)
 
-### Features
-- Responsive.
-- Syntax Highlight
-- Most optimized theme for tech blog.
-- Lightweight with minimum stylesheet.
-- Easy to customize.
-- Offers category menu.
+**Demo:** https://starry99.github.io/catbook/
 
-### _config.yml
-> Code block will look like this.
-```yml
-highlighter-theme: monokai //you can change your syntax color scheme.
-date_format: "%Y-%M-%D" //and date format.
+![SCREENSHOT](https://starry99.github.io/catbook/assets/img/lmode.jpg)
+![SCREENSHOT](https://starry99.github.io/catbook/assets/img/dmode.jpg)
+
+## Setup
+
+```sh
+$ git clone https://github.com/starry99/catbook
+$ jekyll serve
+
+# Now you can start customization!
 ```
 
-### Screenshots
-#### Page
-![alt text](/public/img/screenshot-1.png)
-#### Articles
-![alt text](/public/img/screenshot-2.png)
-#### Page - Mobile
-![alt text](/public/img/screenshot-m1.png)
-#### Page - Articles
-![alt text](/public/img/screenshot-m2.png)
+## Make it yours
+
+If you want to create a new category, you need to create `*name*.html` in the `categories` folder. And add the following content:
+```html
+---
+layout: page
+type: *name*
+---
+
+{% include archive.html %}
+```
+Then the number of pages in the category will be displayed.
+
+## License
+
+[MIT License](https://opensource.org/licenses/MIT)
